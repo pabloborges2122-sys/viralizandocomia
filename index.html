@@ -540,10 +540,10 @@ window.CONFIG = {
         <h3>Cortes no ritmo do feed</h3>
         <p>A skill divide a sua narração em 45 a 60 planos por minuto. Cada corte cai numa palavra-chave, com câmera sempre em movimento, whip-pan entre cenários e punch-in nas revelações. Ninguém tem tempo de rolar o feed.</p>
         <div class="film">
-          <img src="assets/poster.jpg" alt="Quadro do vídeo de exemplo: corte da Terra com buraco atravessando" loading="lazy">
-          <img src="assets/frame-4.jpg" alt="Quadro do vídeo de exemplo" loading="lazy">
-          <img src="assets/frame-6.jpg" alt="Quadro do vídeo de exemplo: cronômetro marcando 42 minutos" loading="lazy">
-          <img src="assets/frame-8.jpg" alt="Quadro do vídeo de exemplo" loading="lazy">
+          <img src="assets/cena-1.jpg" alt="Quadro do vídeo de exemplo: camponês barbudo e guarda na Rússia" loading="lazy">
+          <img src="assets/cena-2.jpg" alt="Quadro do vídeo de exemplo: o czar volta de viagem" loading="lazy">
+          <img src="assets/cena-3.jpg" alt="Quadro do vídeo de exemplo: nobres europeus sem barba" loading="lazy">
+          <img src="assets/cena-4.jpg" alt="Quadro do vídeo de exemplo: moeda do imposto da barba de 1698" loading="lazy">
         </div>
       </div>
       <div class="feat tall rv">
@@ -849,7 +849,7 @@ window.CONFIG = {
     },
     3(){
       L('<span class="p">›</span> renderizando em segundo plano…',0);
-      later(()=>{body.insertAdjacentHTML('beforeend','<div class="line progress"><div id="prog"></div></div><div class="thumbs line"><img src="assets/poster.jpg" alt=""><img src="assets/frame-4.jpg" alt=""><img src="assets/frame-6.jpg" alt=""><img src="assets/frame-8.jpg" alt=""></div><div class="line c" id="progTxt">plano 0/52</div>');
+      later(()=>{body.insertAdjacentHTML('beforeend','<div class="line progress"><div id="prog"></div></div><div class="thumbs line"><img src="assets/sim-0.jpg" alt=""><img src="assets/sim-1.jpg" alt=""><img src="assets/sim-2.jpg" alt=""><img src="assets/sim-3.jpg" alt=""></div><div class="line c" id="progTxt">plano 0/52</div>');
         let p=0; const tick=()=>{if(paused){later(tick,120);return;} p+=2; const bar=document.getElementById('prog'); if(!bar)return; bar.style.width=p+'%'; document.getElementById('progTxt').textContent='plano '+Math.round(p*.52)+'/52';
           body.querySelectorAll('.thumbs img').forEach((im,i)=>{if(p>i*25+8)im.classList.add('in');}); if(p<100)later(tick,90);};
         tick();},400);
